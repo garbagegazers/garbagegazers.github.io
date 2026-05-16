@@ -419,14 +419,21 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 		<script>
-			fetch('https://api.github.com/repos/garbagegazers/garbagegazers.github.io/commits?per_page=1')
-				.then(r => r.json())
-				.then(data => {
-					const d = new Date(data[0].commit.committer.date);
-					const label = d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-					document.getElementById('last-updated-fixed').textContent = label;
-				})
-				.catch(() => {});
+			(function() {
+				var fallback = 'May 16, 2026';
+				var el = document.getElementById('last-updated-fixed');
+				function setDate(str) { if (el) el.textContent = str; }
+				setDate(fallback);
+				fetch('https://api.github.com/repos/garbagegazers/garbagegazers.github.io/commits?per_page=1')
+					.then(function(r) { return r.json(); })
+					.then(function(data) {
+						if (Array.isArray(data) && data[0] && data[0].commit) {
+							var d = new Date(data[0].commit.committer.date);
+							setDate(d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }));
+						}
+					})
+					.catch(function() {});
+			})();
 		</script>
 
 	</body>
