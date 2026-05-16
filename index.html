@@ -6,96 +6,157 @@
 -->
 <html>
 	<head>
-		<title>Dimension by HTML5 UP</title>
+		<title>Garbage Gazers</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			#header h1 {
+				font-size: 3.5rem;
+				line-height: 1.2;
+				color: #ffffff !important;
+				-webkit-text-stroke: 1.5px #000000;
+				text-shadow:
+					-1px -1px 0 #000,
+					 1px -1px 0 #000,
+					-1px  1px 0 #000,
+					 1px  1px 0 #000;
+			}
+			/* Remove all fade-in / preload animations */
+			body.is-preload #header,
+			body.is-preload #header > *,
+			body.is-preload #header .content .inner,
+			body.is-preload #wrapper,
+			body.is-preload #footer {
+				opacity: 1 !important;
+				filter: none !important;
+				-webkit-filter: none !important;
+				max-height: none !important;
+				padding-top: initial !important;
+				padding-bottom: initial !important;
+				transition: none !important;
+				-webkit-transition: none !important;
+			}
+			*, *::before, *::after {
+				transition: none !important;
+				-webkit-transition: none !important;
+				-moz-transition: none !important;
+				-ms-transition: none !important;
+				animation: none !important;
+				-webkit-animation: none !important;
+				opacity: 1 !important;
+				filter: none !important;
+				-webkit-filter: none !important;
+			}
+			#header > *:before,
+			#header nav.use-middle:after {
+				display: none !important;
+			}
+			#header .content {
+				border: none !important;
+			}
+			/* Move nav buttons to top left */
+			#header nav {
+				position: fixed;
+				top: 0;
+				left: 0;
+				z-index: 100;
+				margin-top: 0 !important;
+			}
+			#header nav ul {
+				border: none !important;
+				flex-direction: row !important;
+				align-items: flex-start;
+				margin: 0;
+				padding: 0;
+			}
+			#header nav ul li {
+				border-left: none !important;
+			}
+			#header nav ul li a {
+				font-size: 1.1rem !important;
+				font-weight: bold !important;
+				height: 5rem !important;
+				line-height: 5rem !important;
+				padding: 0 1.5rem !important;
+				color: #000000 !important;
+			}
+			#footer {
+				display: none;
+			}
+			#wrapper {
+				justify-content: center !important;
+				-webkit-justify-content: center !important;
+				-moz-justify-content: center !important;
+			}
+			#footer-fixed {
+				position: fixed;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				z-index: 100;
+				text-align: left;
+				margin: 0;
+				padding: 0.25rem 1.25rem;
+			}
+			#footer-fixed .copyright {
+				font-size: 0.75rem;
+				margin: 0;
+				padding: 0;
+				color: #000000 !important;
+			}
+		</style>
 	</head>
-	<body class="is-preload">
+	<body>
 
 		<!-- Wrapper -->
 			<div id="wrapper">
 
 				<!-- Header -->
 					<header id="header">
-						<div class="logo">
-							<span class="icon fa-gem"></span>
-						</div>
 						<div class="content">
 							<div class="inner">
-								<h1>Dimension</h1>
-								<p>A fully responsive site template designed by <a href="https://html5up.net">HTML5 UP</a> and released<br />
-								for free under the <a href="https://html5up.net/license">Creative Commons</a> license.</p>
+								<h1>Garbage<br />Gazers</h1>
 							</div>
 						</div>
 						<nav>
 							<ul>
-								<li><a href="#intro">Intro</a></li>
-								<li><a href="#work">Work</a></li>
-								<li><a href="#about">About</a></li>
+								<li><a href="#research">Research</a></li>
+								<li><a href="#team">Team</a></li>
 								<li><a href="#contact">Contact</a></li>
-								<!--<li><a href="#elements">Elements</a></li>-->
 							</ul>
 						</nav>
 					</header>
 
 				<!-- Main -->
-					<div id="main">
-
-						<!-- Intro -->
-							<article id="intro">
-								<h2 class="major">Intro</h2>
+					<div id="main">					<!-- Research -->
+						<article id="research">
+							<h2 class="major">Research</h2>
 								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
 								<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome work</a>.</p>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
-							</article>
-
-						<!-- Work -->
-							<article id="work">
-								<h2 class="major">Work</h2>
-								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
-								<p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
-								<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
-							</article>
-
-						<!-- About -->
-							<article id="about">
-								<h2 class="major">About</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-								<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
+							</article>					<!-- Team -->
+						<article id="team">
+							<h2 class="major">Team</h2>
+								<p><strong>John Dennehy</strong> is a Professor of Biology at Queens College CUNY; a CUNY Institute for Implementation Science Investigator; a Senior Editor/Editor at ASM's Microbiology Resource Announcements/Virus Evolution respectively; and an Elected Fellow at the American Academy of Microbiology. John is a leader in virology and wastewater-based epidemiology. In 2020, tapped by NYC health officials, he led efforts to quantify and sequence SARS-CoV-2 from the city's wastewater. His team provided the earliest evidence of the Omicron variant in the US. John's lab developed a low-cost device to make this surveillance feasible globally, founding the company Sentinel Biotech LLC. In 2022, John established a Wastewater Epidemiology Training Laboratory Queens College. He continues to advise the NYC biosurveillance program to monitor pathogens in hospital wastewater. <a href="mailto:john.dennehy@qc.cuny.edu" title="Email" class="icon solid fa-envelope"><span class="label">Email</span></a> <a href="https://scholar.google.com/citations?user=xHV6zmQAAAAJ&hl=en" target="_blank" title="Google Scholar" class="icon solid fa-graduation-cap"><span class="label">Scholar</span></a> <a href="https://www.linkedin.com/in/jdennehy/" target="_blank" title="LinkedIn" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a> <a href="https://dennehylab.org/" target="_blank" title="Homepage" class="icon solid fa-globe"><span class="label">Homepage</span></a></p>
+								<p><strong>Denis Nash</strong> is Distinguished Professor of Epidemiology at the CUNY SPH and founding Executive Director of the CUNY Institute for Implementation Science in Population Health. His work sits at the intersection of infectious&#8209;disease epidemiology, public health surveillance, and the use of epidemiologic methods to conduct rigorous assessments of programmatic effectiveness. He has led the design and launch of cohort platforms to study respiratory infections including the CHASING COVID Cohort Study. Building on that infrastructure, Denis and his team recently launched Project&#160;PROTECTS, a national cohort that pairs at home multi-pathogen rapid tests with mail in PCR and saliva specimens to monitor common respiratory pathogens. Nash served as an Epidemic Intelligence Service Officer with the U.S.&#160;CDC, contributing to the investigation that first detected West Nile virus in New&#160;York in&#160;1999. <a href="mailto:denis.nash@sph.cuny.edu" title="Email" class="icon solid fa-envelope"><span class="label">Email</span></a> <a href="https://scholar.google.com/citations?user=4jSjQRUAAAAJ&hl=en&oi=ao" target="_blank" title="Google Scholar" class="icon solid fa-graduation-cap"><span class="label">Scholar</span></a> <a href="https://www.linkedin.com/in/denisnash/" target="_blank" title="LinkedIn" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a> <a href="https://cunyisph.org/team/denis-nash/" target="_blank" title="Homepage" class="icon solid fa-globe"><span class="label">Homepage</span></a></p>
+								<p><strong>Monica Trujillo</strong> is Professor of Biology at Queensborough Community College (QCC), CUNY. Her past work has focused on Streptomyces biology including natural product isolation and environmental sensing. Since 2020 she has worked with Dr. John Dennehy in wastewater-based epidemiology. She teaches Microbiology at QCC, incorporating undergraduate research into her curriculum. She is passionate about mentoring and supporting the next generation of scientists. Monica has six grandchildren and has the honorific title of "abuela" in Dr. Dennehy's lab. <a href="mailto:mtrujillo@qcc.cuny.edu" title="Email" class="icon solid fa-envelope"><span class="label">Email</span></a> <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&user=4TpMn20AAAAJ" target="_blank" title="Google Scholar" class="icon solid fa-graduation-cap"><span class="label">Scholar</span></a> <a href="https://www.linkedin.com/in/trujillo-monica-32193377/" target="_blank" title="LinkedIn" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></p>
+								<p><strong>Nash Rochman</strong> is an Assistant Professor in the CUNY SPH Department of Epidemiology and Biostatistics; a CUNY Institute for Implementation Science in Population Health Investigator; an NIH Special Volunteer; and coEiC of Biology Direct. Nash was drawn to a career in biology to help distil complex and confusing data into predictive models for disease. His work with the Garbage Gazers focuses on genomics data analysis and predictive modelling. Nash splits his time between NYC and DC where he lives with his wife Anita. In many locations, Nash can be found playing jazz trumpet. <a href="mailto:evohgroup@gmail.com" title="Email" class="icon solid fa-envelope"><span class="label">Email</span></a> <a href="https://scholar.google.com/citations?user=lKHvgZsAAAAJ&hl=en" target="_blank" title="Google Scholar" class="icon solid fa-graduation-cap"><span class="label">Scholar</span></a> <a href="https://www.linkedin.com/in/nash-rochman-b35583155/" target="_blank" title="LinkedIn" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a> <a href="https://evoheal.github.io/" target="_blank" title="Homepage" class="icon solid fa-globe"><span class="label">Homepage</span></a></p>
+								<p><strong>Joanna Coleman</strong> is an Assistant Professor in the Department of Biology at Queens College CUNY where she leads the Urban Ecology Lab. Her overarching agenda aims to mitigate the role of urbanization in global biodiversity loss. To that end, she and her mentees do interdisciplinary research using ecology, data science, molecular biology and conservation social science. Joanna also serves as Co-Chair of both the Bat Trade and Human Dimensions Working Groups in the International Union for Conservation of Nature, Species Survival Commission, Bat Specialist Group. This native Montrealer tries to spend as much time as possible outdoors and in Canada. <a href="mailto:joanna.coleman@qc.cuny.edu" title="Email" class="icon solid fa-envelope"><span class="label">Email</span></a> <a href="https://scholar.google.com/citations?hl=en&user=_VseLvIAAAAJ" target="_blank" title="Google Scholar" class="icon solid fa-graduation-cap"><span class="label">Scholar</span></a> <a href="https://urban-ecologist.com/" target="_blank" title="Homepage" class="icon solid fa-globe"><span class="label">Homepage</span></a></p>
+								<p><strong>Leopolda Silvera</strong> serves as the Director of Public &amp; Global Health Initiatives and Biosurveillance for New York City Health + Hospitals and is a CUNY Institute for Implementation Science Investigator. In this role, she develops and supports programs with a focus on "Glocal" Health Equity, which combine global and local health strategies. Her program utilizes genomic sequencing and wastewater surveillance for early detection of public health emergencies. Leopolda's previous work has implemented saliva testing for COVID-19 and environmental monitoring. She is a PhD candidate in Public/Global Health, Equity &amp; Biosurveillance. She mentors graduate students at Mount Sinai, CUNY, and SUNY in public/global health. Leopolda holds an MPHIL from The New School, MPA from Baruch College, and BA from Queens College CUNY. <a href="mailto:SilveraL@nychhc.org" title="Email" class="icon solid fa-envelope"><span class="label">Email</span></a> <a href="https://www.linkedin.com/in/leopolda-silvera-mpa-mphil-18814934" target="_blank" title="LinkedIn" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></p>
+								<p><strong>Sherin Kannoly</strong> is a Research Scientist in the Department of Biology at Queens College CUNY. Trained in microbiology and molecular biology, he is involved in studying bacteriophages and detecting viruses in wastewater. In 2020, he was involved in developing protocols to concentrate SARS-CoV-2 from NYC wastewater. He was instrumental in developing a novel technology that allows in situ passive sampling of microorganisms and facilitates extraction of microbial genomes. The technology was successfully employed to detect SARS-CoV-2, influenza, and Mpox in hospital wastewater. Sherin is the co-founder of Sentinel Biotech LLC, a private company primarily involved in developing kits for sampling microbes from water sources. <a href="mailto:sherin.kannoly@gmail.com" title="Email" class="icon solid fa-envelope"><span class="label">Email</span></a> <a href="https://scholar.google.com/citations?user=LZo1WjgAAAAJ&hl=en" target="_blank" title="Google Scholar" class="icon solid fa-graduation-cap"><span class="label">Scholar</span></a> <a href="https://www.linkedin.com/in/sherin-kannoly-77321521" target="_blank" title="LinkedIn" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></p>
+								<p><strong>Madhura Rane</strong> is a Research Scientist at the CUNY Institute for Implementation Science in Population Health. Her work centers on infectious disease epidemiology and the application of statistical methods to evaluate health interventions at the population level, including vaccination programs. Her current research interests include vaccine confidence and uptake in the US, spatio-temporal dynamics of infectious diseases, and novel disease surveillance methods. Madhura has worked as a wastewater epidemiologist at the California Department of Public Health where she evaluated the potential for wastewater surveillance to serve as an early detection method for upcoming epidemic surges. Based in Seattle, she spends her free time hiking the trails of the PNW. <a href="mailto:madhura.rane@sph.cuny.edu" title="Email" class="icon solid fa-envelope"><span class="label">Email</span></a> <a href="https://scholar.google.com/citations?user=PKlNX5EAAAAJ&hl=en&oi=ao" target="_blank" title="Google Scholar" class="icon solid fa-graduation-cap"><span class="label">Scholar</span></a> <a href="https://www.linkedin.com/in/madhura-rane/" target="_blank" title="LinkedIn" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></p>
+								<p><strong>Taylor Rubin</strong> is a PhD student in the Department of Biology at Queens College CUNY in the Urban Ecology Lab under the advisement of Dr. Joanna Coleman. She received her bachelor's degree in Biological Anthropology from the College of William &amp; Mary and her master's degree in Psychology (Neuroscience &amp; Animal Behavior) from Emory University. She then spent 8 years at Zoo Atlanta in the education and bird departments, where she got involved in vulture conservation. Her conservation interest led her to Tucson Bird Alliance where she managed the education and volunteer programs. Her interest in vultures piqued her interest in all scavengers, leading to her current focus on the impact of urban trash on disease dynamics. <a href="mailto:trubin@gradcenter.cuny.edu" title="Email" class="icon solid fa-envelope"><span class="label">Email</span></a> <a href="https://scholar.google.com/citations?user=miv8BnMAAAAJ&hl=en" target="_blank" title="Google Scholar" class="icon solid fa-graduation-cap"><span class="label">Scholar</span></a> <a href="https://www.linkedin.com/in/taylor-l-rubin" target="_blank" title="LinkedIn" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></p>
+								<p><strong>Fiona Fogarty</strong> is a Ferguson RISE post-doctoral scholar and Research Scientist at the CUNY Institute for Implementation Science in Population Health. She received her PhD in Environmental and Planetary Health Sciences and MPH in Community Health from CUNY SPH, where she is now an adjunct lecturer. Her work has spanned the life-course: from assessing risk factors associated with prenatal heavy metal exposure and developmental outcomes, to studying the effects of occupational heat stress on cognition late in life. Her work with the Garbage Gazers focuses on integrating genomics data science into traditional epi methods to support wastewater surveillance. Fiona enjoys running, playing traditional Irish fiddle and piano, and above all: spending time with her husband, son (human), and daughter (cat). <a href="mailto:fiona.conway@sph.cuny.edu" title="Email" class="icon solid fa-envelope"><span class="label">Email</span></a> <a href="https://scholar.google.com/citations?user=6vEF4fUAAAAJ&hl=en" target="_blank" title="Google Scholar" class="icon solid fa-graduation-cap"><span class="label">Scholar</span></a> <a href="https://www.linkedin.com/in/fiona-conway-fogarty-phd-mph-017482132/" target="_blank" title="LinkedIn" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></p>
+								<p><strong>Sofia Pesantez</strong> is a CDC Dr. James A. Ferguson Emerging Infectious Disease RISE Fellow. She is a graduate of Stanford University with a master's degree in Epidemiology and Clinical Research, and a B.S. degree with Honors in Human Biology, concentrating in Global Public Health and Human Performance. Her master's thesis examined clinical and environmental risk factors associated with stillbirth outcomes in Bangladesh, reflecting her commitment to global maternal and child health. Her broader research interests lie in helping to reduce global disparities in access to healthcare. She will begin medical school in the fall of 2026, where she plans to integrate her epidemiology background into clinical research aimed at advancing health equity worldwide. <a href="mailto:sofiapesantez@hotmail.com" title="Email" class="icon solid fa-envelope"><span class="label">Email</span></a> <a href="https://www.linkedin.com/in/sofia-pesantez" target="_blank" title="LinkedIn" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></p>
 							</article>
 
 						<!-- Contact -->
 							<article id="contact">
-								<h2 class="major">Contact</h2>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="4"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Reset" /></li>
-									</ul>
-								</form>
-								<ul class="icons">
-									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</article>
+							<h2 class="major">Contact</h2>
+							<p>Let's Meet! Just send us an <a href="mailto:garbagegazers@gmail.com">email</a>.</p>
+						</article>
 
 						<!-- Elements -->
 							<article id="elements">
@@ -343,10 +404,15 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 				<!-- Footer -->
 					<footer id="footer">
-						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+						<p class="copyright">Updated: <span id="last-updated"></span> &nbsp;|&nbsp; Design template: <a href="https://html5up.net">HTML5 UP</a></p>
 					</footer>
 
 			</div>
+
+		<!-- Footer (fixed position) -->
+			<footer id="footer-fixed">
+				<p class="copyright">Updated: <span id="last-updated-fixed"></span> &nbsp;|&nbsp; Design template: <a href="https://html5up.net">HTML5 UP</a></p>
+			</footer>
 
 		<!-- BG -->
 			<div id="bg"></div>
