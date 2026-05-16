@@ -402,12 +402,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 					</div>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<p class="copyright">Updated: <span id="last-updated"></span> &nbsp;|&nbsp; Design template: <a href="https://html5up.net">HTML5 UP</a></p>
-					</footer>
-
-			</div>
+		</div>
 
 		<!-- Footer (fixed position) -->
 			<footer id="footer-fixed">
@@ -423,6 +418,16 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+		<script>
+			fetch('https://api.github.com/repos/garbagegazers/garbagegazers.github.io/commits?per_page=1')
+				.then(r => r.json())
+				.then(data => {
+					const d = new Date(data[0].commit.committer.date);
+					const label = d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+					document.getElementById('last-updated-fixed').textContent = label;
+				})
+				.catch(() => {});
+		</script>
 
 	</body>
 </html>
