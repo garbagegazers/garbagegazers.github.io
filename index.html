@@ -107,6 +107,28 @@
 				color: #000000 !important;
 			}
 			@media (max-width: 736px) {
+				html, body {
+					overflow: hidden !important;
+					position: fixed !important;
+					width: 100% !important;
+					height: 100% !important;
+					touch-action: none;
+				}
+				#header {
+					position: fixed !important;
+					top: 50% !important;
+					left: 50% !important;
+					transform: translate(-50%, -50%) !important;
+					-webkit-transform: translate(-50%, -50%) !important;
+					z-index: 50;
+					pointer-events: none;
+				}
+				#header nav {
+					pointer-events: auto;
+				}
+				#header .content {
+					pointer-events: none;
+				}
 				#footer-fixed .copyright,
 				#footer-fixed .copyright a {
 					color: #ffffff !important;
