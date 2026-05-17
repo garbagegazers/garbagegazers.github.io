@@ -107,15 +107,21 @@
 				color: #000000 !important;
 			}
 			@media (max-width: 736px) {
+				/* Lock only the background/wrapper — don't block article panel scrolling */
 				html, body {
 					overflow: hidden !important;
 					position: fixed !important;
 					width: 100% !important;
 					height: 100% !important;
-					touch-action: none;
 				}
-				/* Cover full screen so flexbox centering works without transform.
-				   No transform = nav's own position:fixed stays relative to viewport. */
+				/* Allow the article panels themselves to scroll with touch */
+				#main article {
+					overflow-y: auto !important;
+					-webkit-overflow-scrolling: touch !important;
+					touch-action: pan-y !important;
+				}
+				/* Cover full screen with header so flexbox can center title.
+				   No transform = nav's own position:fixed stays viewport-relative. */
 				#header {
 					position: fixed !important;
 					top: 0 !important;
@@ -136,15 +142,15 @@
 					border: none !important;
 					background: transparent !important;
 				}
-				/* Nav is already position:fixed top-left globally; re-assert it here */
 				#header nav {
 					pointer-events: auto;
 					position: fixed !important;
 					top: 0 !important;
 					left: 0 !important;
 				}
-				/* Hide the title when an article panel is open */
-				body.is-article-visible #header .content {
+				/* Hide title AND nav when a panel is open */
+				body.is-article-visible #header .content,
+				body.is-article-visible #header nav {
 					display: none !important;
 				}
 				#footer-fixed .copyright,
