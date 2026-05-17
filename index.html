@@ -114,20 +114,34 @@
 					height: 100% !important;
 					touch-action: none;
 				}
+				/* Cover full screen so flexbox centering works without transform.
+				   No transform = nav's own position:fixed stays relative to viewport. */
 				#header {
 					position: fixed !important;
-					top: 50% !important;
-					left: 50% !important;
-					transform: translate(-50%, -50%) !important;
-					-webkit-transform: translate(-50%, -50%) !important;
+					top: 0 !important;
+					left: 0 !important;
+					width: 100% !important;
+					height: 100% !important;
+					transform: none !important;
+					-webkit-transform: none !important;
+					display: flex !important;
+					align-items: center !important;
+					justify-content: center !important;
 					z-index: 50;
 					pointer-events: none;
-				}
-				#header nav {
-					pointer-events: auto;
+					background: transparent !important;
 				}
 				#header .content {
 					pointer-events: none;
+					border: none !important;
+					background: transparent !important;
+				}
+				/* Nav is already position:fixed top-left globally; re-assert it here */
+				#header nav {
+					pointer-events: auto;
+					position: fixed !important;
+					top: 0 !important;
+					left: 0 !important;
 				}
 				#footer-fixed .copyright,
 				#footer-fixed .copyright a {
